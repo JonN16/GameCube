@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código - GameCube</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🎮</div>
+                <span>GameCube</span>
+            </a>
+            <nav>
+                <a href="../index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="tecnologias.html">Tecnologias</a>
+                <a href="processo.html">Processo</a>
+                <a href="controles.html">Controles</a>
+                <a href="codigo.html">Código</a>
+                <a href="equipe.html">Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Código do Projeto</h1>
+            <p>Explore a implementação técnica do GameCube</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">💻 Repositório Git</h2>
+            <p class="section-subtitle">Acesso ao código-fonte completo</p>
+
+            <div style="background: rgba(10, 22, 40, 0.9); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2); text-align: center; margin: 40px 0;">
+                <div style="font-size: 48px; margin-bottom: 20px;">📦</div>
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 28px;">GameCube - Repositório Público</h3>
+                <p style="color: #a8b4d8; margin-bottom: 30px; font-size: 18px;">
+                    Todo o código-fonte está disponível no GitHub para que você possa aprender, usar e contribuir!
+                </p>
+                <a href="https://github.com/seu-usuario/gamecube" class="btn" style="font-size: 18px; padding: 15px 40px;">
+                    🔗 Acessar Repositório
+                </a>
+                <p style="color: #7a8ba8; margin-top: 30px; font-size: 16px;">
+                    Licença: MIT | Linguagens: C++, JavaScript/React Native, Arduino
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);">
+        <div class="container">
+            <h2 class="section-title">🏗️ Estrutura do Projeto</h2>
+            <p class="section-subtitle">Organização dos arquivos</p>
+
+            <div style="background: rgba(15, 0, 21, 0.8); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3); margin: 40px 0; overflow-x: auto;">
+                <pre style="color: #d4d4d4; font-family: 'Courier New', monospace; line-height: 1.6; margin: 0;">gamecube/
+├── arduino/
+│   ├── gamecube_main/
+│   │   ├── gamecube_main.ino
+│   │   ├── Snake.h
+│   │   ├── Tetris.h
+│   │   ├── Pong.h
+│   │   ├── Breakout.h
+│   │   ├── LEDMatrix.h
+│   │   └── BluetoothControl.h
+│   └── libraries/
+│       ├── FastLED/
+│       └── SoftwareSerial/
+│
+├── mobile/
+│   ├── GameCubeApp/
+│   │   ├── src/
+│   │   │   ├── screens/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   │   └── BluetoothService.js
+│   │   │   └── App.js
+│   │   ├── package.json
+│   │   └── app.json
+│
+├── docs/
+│   ├── README.md
+│   ├── SETUP.md
+│   ├── GAMEPLAY.md
+│   └── ARCHITECTURE.md
+│
+└── website/
+    ├── index.html
+    ├── sobre.html
+    ├── jogos.html
+    ├── tecnologias.html
+    ├── processo.html
+    ├── codigo.html
+    ├── equipe.html
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── main.js</pre>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">⚙️ Módulos Principais</h2>
+            <p class="section-subtitle">Componentes chave da implementação</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Game Engine</h3>
+                    <p>
+                        <strong>Arquivo:</strong> gamecube_main.ino<br><br>
+                        Loop principal que gerencia estado do jogo, processa inputs Bluetooth, atualiza lógica de jogo 
+                        e renderiza para os LEDs. Otimizado para rodar a ~60 FPS mesmo com recursos limitados.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐍</div>
+                    <h3>Snake Game</h3>
+                    <p>
+                        <strong>Arquivo:</strong> Snake.h<br><br>
+                        Implementação do jogo Snake com movimento, colisão, crescimento e renderização. 
+                        Usa array circular para gerenciar posições do corpo sem memory leaks.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👾</div>
+                    <h3>Tetris Game</h3>
+                    <p>
+                        <strong>Arquivo:</strong> Tetris.h<br><br>
+                        Implementação de Tetris com 7 tetrominós, rotação, detecção de colisão complexa 
+                        e cascata de peças. Otimizado para performance em Arduino.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏓</div>
+                    <h3>Pong Game</h3>
+                    <p>
+                        <strong>Arquivo:</strong> Pong.h<br><br>
+                        Jogo de dois jogadores com bola, raquetes, física de ricochete e IA para CPU. 
+                        Implementa detecção de colisão com cálculo de ângulo.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Breakout Game</h3>
+                    <p>
+                        <strong>Arquivo:</strong> Breakout.h<br><br>
+                        Jogo de quebra-blocos com grid de blocos, bola ricocheteante e raquete controlável. 
+                        Gerencia destruição de blocos e calcula pontos dinamicamente.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>LED Matrix Control</h3>
+                    <p>
+                        <strong>Arquivo:</strong> LEDMatrix.h<br><br>
+                        Abstração para controlar a matriz 16x16 de LEDs. Funções para desenhar pixels, linhas, 
+                        retângulos e limpar tela. Interface simples para os jogos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📡</div>
+                    <h3>Bluetooth Control</h3>
+                    <p>
+                        <strong>Arquivo:</strong> BluetoothControl.h<br><br>
+                        Protocolo de comunicação com o aplicativo mobile. Recebe comandos de movimento, 
+                        seleção de jogo e envia estado para sincronização.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile App (React Native)</h3>
+                    <p>
+                        <strong>Diretório:</strong> mobile/GameCubeApp<br><br>
+                        Aplicativo Android para controlar GameCube. Interface com botões, seletor de jogo, 
+                        status de conexão e leaderboard local.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔌</div>
+                    <h3>Bluetooth Service</h3>
+                    <p>
+                        <strong>Arquivo:</strong> BluetoothService.js<br><br>
+                        Serviço React Native para gerenciar conexão Bluetooth, envio de comandos e recepção de 
+                        atualizações de estado do hardware.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">⚙️ Exemplos de Código</h2>
+            <p class="section-subtitle">Snippets principais do projeto</p>
+
+            <div style="margin: 40px 0;">
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🔌 Inicialização do Bluetooth (Arduino)</h3>
+                <div class="code-editor">void setupBluetooth() {
+  // Inicializa comunicação serial para Bluetooth
+  Serial.begin(9600);
+  BTSerial.begin(9600);
+  
+  // Configura pinos de controle
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(DATA_PIN, OUTPUT);
+  
+  Serial.println("Bluetooth inicializado!");
+}</div>
+            </div>
+
+            <div style="margin: 40px 0;">
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎮 Loop Principal de Jogo</h3>
+                <div class="code-editor">void gameLoop() {
+  // Atualiza estado do jogo
+  updateGameState();
+  
+  // Renderiza matriz de LEDs
+  renderMatrix();
+  
+  // Lê entrada do Bluetooth
+  if (BTSerial.available()) {
+    char command = BTSerial.read();
+    processGameInput(command);
+  }
+  
+  // Pequeno delay para timing
+  delay(50);
+}</div>
+            </div>
+
+            <div style="margin: 40px 0;">
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎨 Renderização de Matriz LED</h3>
+                <div class="code-editor">void renderMatrix() {
+  // Limpa buffer anterior
+  FastLED.clear();
+  
+  // Desenha cada pixel da matriz 16x16
+  for (int y = 0; y < MATRIX_HEIGHT; y++) {
+    for (int x = 0; x < MATRIX_WIDTH; x++) {
+      int index = y * MATRIX_WIDTH + x;
+      leds[index] = gameBuffer[y][x];
+    }
+  }
+  
+  // Envia para os LEDs
+  FastLED.show();
+}</div>
+            </div>
+
+            <div style="margin: 40px 0;">
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">📱 Conexão Bluetooth (React Native)</h3>
+                <div class="code-editor">const connectDevice = async (device) => {
+  try {
+    await BleManager.connect(device.id);
+    setConnected(true);
+    setSelectedDevice(device);
+    
+    // Descobre serviços do dispositivo
+    await BleManager.retrieveServices(device.id);
+    
+    console.log('Conectado ao:', device.name);
+  } catch (error) {
+    console.error('Erro ao conectar:', error);
+  }
+};</div>
+            </div>
+
+            <div style="margin: 40px 0;">
+                <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎮 Enviar Comando de Movimento</h3>
+                <div class="code-editor">const sendGameCommand = async (direction) => {
+  if (!selectedDevice) return;
+  
+  const commandByte = Buffer.from([direction]);
+  
+  try {
+    await BleManager.write(
+      selectedDevice.id,
+      'serviceUUID',
+      'characteristicUUID',
+      commandByte
+    );
+  } catch (error) {
+    console.error('Erro ao enviar comando:', error);
+  }
+};</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);">
+        <div class="container">
+            <h2 class="section-title">📚 Documentação Técnica</h2>
+            <p class="section-subtitle">Guias para entender o código</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0;">
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">📖 README.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Visão geral do projeto, como configurar o ambiente, requisitos de hardware e instruções de 
+                        compilação. Ponto de partida perfeito para novos contribuidores.
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/README.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">🔧 SETUP.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Guia passo a passo para configurar o Arduino IDE, instalar bibliotecas, carregar o código 
+                        e fazer upload do firmware. Inclui troubleshooting comum.
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/docs/SETUP.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">🎮 GAMEPLAY.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Documentação detalhada de cada jogo: regras, controles, mecânicas especiais e estratégias. 
+                        Perfeito para entender como cada jogo funciona.
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/docs/GAMEPLAY.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">🏗️ ARCHITECTURE.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Explicação da arquitetura geral, fluxo de dados, e como os módulos interagem. 
+                        Essencial para quem quer modificar ou estender o código.
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/docs/ARCHITECTURE.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">🔌 API.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Referência completa das APIs disponíveis: funções do Arduino, estruturas de dados e 
+                        métodos do aplicativo mobile.
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/docs/API.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+
+                <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 22px;">🤝 CONTRIBUTING.md</h3>
+                    <p style="color: #a8b4d8; line-height: 1.8;">
+                        Guia para contribuir ao projeto. Padrões de código, processo de pull request e ideias para 
+                        novas features. Queremos sua ajuda!
+                    </p>
+                    <a href="https://github.com/seu-usuario/gamecube/blob/main/CONTRIBUTING.md" style="color: #00d9ff; text-decoration: none; margin-top: 15px; display: inline-block;">
+                        Abrir arquivo →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">🎯 Como Contribuir</h2>
+            <p class="section-subtitle">Ideias para melhorias futuras</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Novos Jogos</h3>
+                    <p>
+                        Implemente novos clássicos de arcade! Pac-Man, Space Invaders, Flappy Bird? 
+                        A arquitetura modular torna fácil adicionar novos jogos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>IA Melhorada</h3>
+                    <p>
+                        Melhorar o adversário CPU em Pong. Implementar desafios progressivos. 
+                        Adicionar diferentes níveis de dificuldade com IA diferente.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Leaderboard Online</h3>
+                    <p>
+                        Integrar com backend para leaderboard global. Sincronizar scores com internet. 
+                        Adicionar achievements e badges.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Temas e Skins</h3>
+                    <p>
+                        Adicionar diferentes temas visuais. Permettir customização de cores. 
+                        Criar packs de skins com temas especiais.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>App iOS</h3>
+                    <p>
+                        React Native já suporta iOS! Portar o aplicativo para rodar em iPhones e iPads. 
+                        Adicionar suporte a mais sensores do dispositivo.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎙️</div>
+                    <h3>Suporte a Áudio</h3>
+                    <p>
+                        Adicionar módulo de som. Implementar efeitos sonoros para cada jogo. 
+                        Criar trilha sonora dinâmica que muda com o gameplay.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>GameCube - Aprenda na Prática</h3>
+            <p style="margin-top: 20px; opacity: 0.7;">
+                Projeto desenvolvido com ❤️ por João Eduardo, Nicolas Palácio, Lorenzo Oliveira e Mateus Bedim
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

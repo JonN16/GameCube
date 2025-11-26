@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles - GameCube</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .controls-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .game-controls {
+            background: rgba(30, 30, 30, 0.7);
+            border: 2px solid rgba(0, 217, 255, 0.25);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .game-controls:hover {
+            border-color: rgba(0, 217, 255, 0.7);
+            background: rgba(40, 40, 40, 0.9);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.25);
+            transform: translateY(-10px);
+        }
+
+        .game-controls h3 {
+            color: #00d9ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+            padding-bottom: 15px;
+        }
+
+        .control-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .control-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            color: #d0d0d0;
+            font-size: 16px;
+            line-height: 1.8;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .control-list li:last-child {
+            border-bottom: none;
+        }
+
+        .control-icon {
+            min-width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(0, 153, 204, 0.2) 100%);
+            border: 2px solid rgba(0, 217, 255, 0.5);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #00d9ff;
+            transition: all 0.3s;
+        }
+
+        .game-controls:hover .control-icon {
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+            border-color: rgba(0, 217, 255, 0.9);
+        }
+
+        .control-desc {
+            flex: 1;
+        }
+
+        .control-key {
+            color: #00d9ff;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .control-detail {
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(0, 153, 204, 0.15) 100%);
+            border-left: 4px solid rgba(0, 217, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            color: #d0d0d0;
+            line-height: 1.8;
+        }
+
+        .alert-banner h4 {
+            color: #00d9ff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.4);
+        }
+
+        .control-type {
+            display: inline-block;
+            background: rgba(0, 217, 255, 0.2);
+            color: #00d9ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🎮</div>
+                <span>GameCube</span>
+            </a>
+            <nav>
+                <a href="../index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="tecnologias.html">Tecnologias</a>
+                <a href="processo.html">Processo</a>
+                <a href="controles.html">Controles</a>
+                <a href="codigo.html">Código</a>
+                <a href="equipe.html">Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Controles dos Jogos</h1>
+            <p>Mapeamento de entrada para cada jogo</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="alert-banner">
+                <h4>📱 Detecção Automática de Jogo</h4>
+                <p>
+                    O aplicativo mobile detecta automaticamente qual jogo está rodando no Arduino. 
+                    Quando você seleciona ou muda de jogo, a interface de controle se adapta automaticamente 
+                    para exibir apenas os controles específicos daquele jogo.
+                </p>
+            </div>
+
+            <h2 class="section-title">🎮 Mapeamento de Controles</h2>
+            <p class="section-subtitle">Cada jogo tem seus próprios controles otimizados</p>
+
+            <div class="controls-container">
+                <!-- SNAKE -->
+                <div class="game-controls">
+                    <h3>🐍 Snake</h3>
+                    <ul class="control-list">
+                        <li>
+                            <div class="control-icon">⬅️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Esquerda (Left)</span>
+                                <span class="control-detail">Move a cobra para a esquerda</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">➡️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Direita (Right)</span>
+                                <span class="control-detail">Move a cobra para a direita</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⬆️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Cima (Up)</span>
+                                <span class="control-detail">Move a cobra para cima</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⬇️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Baixo (Down)</span>
+                                <span class="control-detail">Move a cobra para baixo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⏸️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Pausar (Pause)</span>
+                                <span class="control-detail">Pausa/Retoma o jogo</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="control-type">Analógico: Joystick + Botões</div>
+                </div>
+
+                <!-- TETRIS -->
+                <div class="game-controls">
+                    <h3>👾 Tetris</h3>
+                    <ul class="control-list">
+                        <li>
+                            <div class="control-icon">⬅️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Esquerda (Left)</span>
+                                <span class="control-detail">Move a peça para a esquerda</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">➡️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Direita (Right)</span>
+                                <span class="control-detail">Move a peça para a direita</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">🔄</div>
+                            <div class="control-desc">
+                                <span class="control-key">Girar (Rotate)</span>
+                                <span class="control-detail">Rotaciona a peça (A ou Z)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⬇️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Baixo (Down)</span>
+                                <span class="control-detail">Acelera a queda da peça</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">📥</div>
+                            <div class="control-desc">
+                                <span class="control-key">Drop Rápido (Drop)</span>
+                                <span class="control-detail">Faz a peça cair rapidamente</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⏸️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Pausar (Pause)</span>
+                                <span class="control-detail">Pausa/Retoma o jogo</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="control-type">Analógico: Joystick + 4 Botões</div>
+                </div>
+
+                <!-- PAC-MAN -->
+                <div class="game-controls">
+                    <h3>🟠 Pac-Man</h3>
+                    <ul class="control-list">
+                        <li>
+                            <div class="control-icon">⬅️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Esquerda (Left)</span>
+                                <span class="control-detail">Move o Pac-Man para a esquerda</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">➡️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Direita (Right)</span>
+                                <span class="control-detail">Move o Pac-Man para a direita</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⬆️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Cima (Up)</span>
+                                <span class="control-detail">Move o Pac-Man para cima</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">⬇️</div>
+                            <div class="control-desc">
+                                <span class="control-key">Baixo (Down)</span>
+                                <span class="control-detail">Move o Pac-Man para baixo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="control-icon">🚀</div>
+                            <div class="control-desc">
+                                <span class="control-key">Turbo (Shift)</span>
+                                <span class="control-detail">Aumenta velocidade temporariamente</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="control-type">Analógico: Joystick 8 Direções</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);">
+        <div class="container">
+            <h2 class="section-title">📡 Protocolo de Comunicação</h2>
+            <p class="section-subtitle">Como o app detecta qual jogo está rodando</p>
+
+            <div class="content-intro">
+                <h2>🔄 Fluxo de Detecção</h2>
+                <ol style="color: #d0d0d0; padding: 20px 40px; line-height: 2;">
+                    <li><strong style="color: #00d9ff;">Arduino Envia ID do Jogo</strong>
+                        <div style="color: #a0a0a0; font-size: 14px; margin-top: 5px;">
+                            Quando um jogo é selecionado/iniciado, o Arduino envia um identificador único via Bluetooth
+                            (ex: "GAME:SNAKE" ou "GAME:TETRIS")
+                        </div>
+                    </li>
+                    <li style="margin-top: 15px;"><strong style="color: #00d9ff;">App Recebe Mensagem</strong>
+                        <div style="color: #a0a0a0; font-size: 14px; margin-top: 5px;">
+                            O aplicativo React Native captura a mensagem na porta Bluetooth e identifica qual jogo está ativo
+                        </div>
+                    </li>
+                    <li style="margin-top: 15px;"><strong style="color: #00d9ff;">Interface se Adapta</strong>
+                        <div style="color: #a0a0a0; font-size: 14px; margin-top: 5px;">
+                            A UI muda para mostrar APENAS os controles daquele jogo específico
+                        </div>
+                    </li>
+                    <li style="margin-top: 15px;"><strong style="color: #00d9ff;">Usuário Controla</strong>
+                        <div style="color: #a0a0a0; font-size: 14px; margin-top: 5px;">
+                            Os inputs são enviados de volta ao Arduino com formato esperado para aquele jogo
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 25px; border-radius: 12px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">🎯 Vantagens</h3>
+                    <ul style="color: #c0c0c0; line-height: 2; list-style: none; padding: 0;">
+                        <li>✓ Interface limpa</li>
+                        <li>✓ Sem confusão</li>
+                        <li>✓ UX otimizada</li>
+                        <li>✓ Fácil de usar</li>
+                        <li>✓ Sem erros de input</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 25px; border-radius: 12px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">💾 Dados Transmitidos</h3>
+                    <ul style="color: #c0c0c0; line-height: 2; list-style: none; padding: 0;">
+                        <li>📨 ID do jogo</li>
+                        <li>⏱️ Timestamp</li>
+                        <li>🎛️ Valor do input</li>
+                        <li>✔️ Status do jogo</li>
+                        <li>📊 Score/Dados</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 25px; border-radius: 12px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">🔐 Segurança</h3>
+                    <ul style="color: #c0c0c0; line-height: 2; list-style: none; padding: 0;">
+                        <li>🔒 Checksums</li>
+                        <li>⚠️ Validação</li>
+                        <li>🛡️ Error handling</li>
+                        <li>🔄 Retry logic</li>
+                        <li>⏰ Timeout protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 0, 0, 0.2) 100%);">
+        <div class="container">
+            <h2 class="section-title">📱 Aplicativo Mobile React Native</h2>
+            <p class="section-subtitle">Interface do controle em cada dispositivo</p>
+
+            <div style="max-width: 1000px; margin: 40px auto; padding: 20px; background: rgba(30, 30, 30, 0.5); border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2);">
+                <p style="color: #d0d0d0; text-align: center; line-height: 1.8; margin-bottom: 20px;">
+                    <strong style="color: #00d9ff;">O aplicativo mobile</strong> desenvolvido em <strong style="color: #00d9ff;">React Native</strong> detecta automaticamente qual jogo está rodando no Arduino via Bluetooth e adapta a interface de controle em tempo real. Cada jogo possui seus próprios controles otimizados.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="background: rgba(30, 30, 30, 0.7); border: 2px solid rgba(0, 217, 255, 0.25); border-radius: 15px; overflow: hidden; transition: all 0.3s; cursor: pointer;">
+                    <div style="background: rgba(0, 217, 255, 0.1); padding: 40px; text-align: center; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s;">
+                        <div style="font-size: 64px; margin-bottom: 15px;">🐍</div>
+                        <h3 style="color: #00d9ff; margin-bottom: 10px;">Snake Control</h3>
+                        <p style="color: #a0a0a0; font-size: 14px;">Joystick 4 direções + Pausa</p>
+                    </div>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); border: 2px solid rgba(0, 217, 255, 0.25); border-radius: 15px; overflow: hidden; transition: all 0.3s; cursor: pointer;">
+                    <div style="background: rgba(0, 217, 255, 0.1); padding: 40px; text-align: center; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s;">
+                        <div style="font-size: 64px; margin-bottom: 15px;">👾</div>
+                        <h3 style="color: #00d9ff; margin-bottom: 10px;">Tetris Control</h3>
+                        <p style="color: #a0a0a0; font-size: 14px;">Joystick + Rotação + Drop</p>
+                    </div>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); border: 2px solid rgba(0, 217, 255, 0.25); border-radius: 15px; overflow: hidden; transition: all 0.3s; cursor: pointer;">
+                    <div style="background: rgba(0, 217, 255, 0.1); padding: 40px; text-align: center; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s;">
+                        <div style="font-size: 64px; margin-bottom: 15px;">🏓</div>
+                        <h3 style="color: #00d9ff; margin-bottom: 10px;">Pong Control</h3>
+                        <p style="color: #a0a0a0; font-size: 14px;">Joystick Y-Axis + Ações</p>
+                    </div>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); border: 2px solid rgba(0, 217, 255, 0.25); border-radius: 15px; overflow: hidden; transition: all 0.3s; cursor: pointer;">
+                    <div style="background: rgba(0, 217, 255, 0.1); padding: 40px; text-align: center; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s;">
+                        <div style="font-size: 64px; margin-bottom: 15px;">🧱</div>
+                        <h3 style="color: #00d9ff; margin-bottom: 10px;">Breakout Control</h3>
+                        <p style="color: #a0a0a0; font-size: 14px;">Joystick X-Axis + Launch</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; padding: 25px; background: rgba(0, 217, 255, 0.08); border-left: 4px solid rgba(0, 217, 255, 0.6); border-radius: 10px;">
+                <h3 style="color: #00d9ff; margin-bottom: 15px;">📲 Como Funciona</h3>
+                <ol style="color: #d0d0d0; padding-left: 20px; line-height: 2;">
+                    <li><strong style="color: #00d9ff;">Conexão Bluetooth</strong> - O app se conecta ao Arduino automaticamente</li>
+                    <li><strong style="color: #00d9ff;">Detecção de Jogo</strong> - Arduino envia qual jogo está rodando</li>
+                    <li><strong style="color: #00d9ff;">Adaptação de UI</strong> - Interface muda dinamicamente para o jogo</li>
+                    <li><strong style="color: #00d9ff;">Controle em Tempo Real</strong> - Inputs são enviados com latência mínima</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">⌨️ Entrada de Controle</h2>
+            <p class="section-subtitle">Tipos de entrada suportados</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px;">
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">🕹️</div>
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">Joystick Analógico</h3>
+                    <p style="color: #c0d4ff; line-height: 1.8;">
+                        Entrada de eixo X/Y para movimento suave e preciso. Ideal para Snake e Pac-Man
+                    </p>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">🔘</div>
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">Botões Discretos</h3>
+                    <p style="color: #c0d4ff; line-height: 1.8;">
+                        Ações específicas como rotação, pausa, drop. Essencial para Tetris
+                    </p>
+                </div>
+
+                <div style="background: rgba(30, 30, 30, 0.7); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.2); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">💫</div>
+                    <h3 style="color: #00d9ff; margin-bottom: 15px;">Entrada Combinada</h3>
+                    <p style="color: #c0d4ff; line-height: 1.8;">
+                        Múltiplos inputs simultâneos para jogos complexos. Latência mínima garantida
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>GameCube - Aprenda na Prática</h3>
+            <p style="margin-top: 20px; opacity: 0.7;">
+                Projeto desenvolvido com ❤️ por João Eduardo, Nicolas Palácio, Lorenzo Oliveira e Mateus Bedim
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

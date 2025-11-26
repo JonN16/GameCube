@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - GameCube</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">🎮</div>
+                <span>GameCube</span>
+            </a>
+            <nav>
+                <a href="../index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="tecnologias.html">Tecnologias</a>
+                <a href="processo.html">Processo</a>
+                <a href="controles.html">Controles</a>
+                <a href="codigo.html">Código</a>
+                <a href="equipe.html">Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Os Jogos do GameCube</h1>
+            <p>Clássicos de arcade reimplementados em hardware moderno</p>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 0, 0, 0.2) 100%);">
+        <div class="container">
+            <h2 class="section-title">🎮 Galeria de Jogos</h2>
+            <p class="section-subtitle">Confira os diferentes estilos de gameplay</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <div style="font-size: 48px;">🐍</div>
+                        <p>Snake</p>
+                        <small>Cobrinha em ação</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <div style="font-size: 48px;">👾</div>
+                        <p>Tetris</p>
+                        <small>Blocos em cascata</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <div style="font-size: 48px;">🟠</div>
+                        <p>Pac-Man</p>
+                        <small>Labirinto e pontos</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <div style="font-size: 48px;">💥</div>
+                        <p>Mais Surpresas</p>
+                        <small>Em desenvolvimento</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">🐍 Snake</h2>
+            <p class="section-subtitle">O jogo da cobrinha que conquistou gerações</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin: 50px 0;">
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">📖 Descrição</h3>
+                        <p style="color: #c0d4ff; line-height: 1.8; margin-bottom: 20px;">
+                            Snake é um jogo clássico onde você controla uma cobrinha que se move pela grade. O objetivo é coletar comida 
+                            (representada por LEDs) sem colidir com as paredes ou com o próprio corpo. A cada comida coletada, a cobra cresce 
+                            de tamanho, aumentando a dificuldade do jogo.
+                        </p>
+                        <h3 style="color: #00d9ff; margin-bottom: 15px; font-size: 20px;">🎮 Controles</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>⬅️ Esquerda: Move a cobra para a esquerda</li>
+                            <li>➡️ Direita: Move a cobra para a direita</li>
+                            <li>⬆️ Cima: Move a cobra para cima</li>
+                            <li>⬇️ Baixo: Move a cobra para baixo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎯 Conceitos Aprendidos</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>✓ Algoritmo de movimento em grade</li>
+                            <li>✓ Detecção de colisão</li>
+                            <li>✓ Gerenciamento de estado (lista dinâmica)</li>
+                            <li>✓ Lógica de crescimento</li>
+                            <li>✓ Scoring e lives</li>
+                            <li>✓ Delay e timing</li>
+                            <li>✓ Renderização de gráficos em matriz LED</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);">
+        <div class="container">
+            <h2 class="section-title">👾 Tetris</h2>
+            <p class="section-subtitle">Encaixe as peças e complete as linhas</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin: 50px 0;">
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎯 Conceitos Aprendidos</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>✓ Rotação de peças em 2D</li>
+                            <li>✓ Colisão de polígonos</li>
+                            <li>✓ Detecção de linhas completas</li>
+                            <li>✓ Cascata de peças</li>
+                            <li>✓ Levels e progressão</li>
+                            <li>✓ Aceleração do jogo</li>
+                            <li>✓ Gerenciamento de fila de spawn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">📖 Descrição</h3>
+                        <p style="color: #c0d4ff; line-height: 1.8; margin-bottom: 20px;">
+                            Tetris apresenta peças geométricas (tetrominós) que caem do topo. Você deve rotacioná-las e posicioná-las 
+                            para completar linhas horizontais. Quando uma linha é preenchida, ela desaparece e as peças acima caem. 
+                            O jogo termina quando as peças chegam ao topo.
+                        </p>
+                        <h3 style="color: #00d9ff; margin-bottom: 15px; font-size: 20px;">🎮 Controles</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>⬅️ Esquerda: Move peça para esquerda</li>
+                            <li>➡️ Direita: Move peça para direita</li>
+                            <li>⬇️ Baixo: Acelera descida</li>
+                            <li>🔄 Girar: Rotaciona a peça</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">🏓 Pong</h2>
+            <p class="section-subtitle">O clássico dos clássicos</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin: 50px 0;">
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">📖 Descrição</h3>
+                        <p style="color: #c0d4ff; line-height: 1.8; margin-bottom: 20px;">
+                            Pong é um jogo de dois jogadores onde cada um controla uma raquete para bater uma bola. O objetivo é fazer 
+                            a bola passar pela raquete do adversário. A bola ricocheta nas paredes e nas raquetes em ângulos diferentes, 
+                            criando dinâmica interessante.
+                        </p>
+                        <h3 style="color: #00d9ff; margin-bottom: 15px; font-size: 20px;">🎮 Controles</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>👤 Jogador 1: Cima/Baixo para mover raquete</li>
+                            <li>👤 Jogador 2: Cima/Baixo para mover raquete</li>
+                            <li>🔄 Reiniciar: Começa novo jogo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎯 Conceitos Aprendidos</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>✓ Física de colisão 2D</li>
+                            <li>✓ Cálculo de ângulo de ricochete</li>
+                            <li>✓ Movimentação independente de objetos</li>
+                            <li>✓ IA para CPU player</li>
+                            <li>✓ Score e vitória/derrota</li>
+                            <li>✓ Velocidade variável de bola</li>
+                            <li>✓ Sincronização multijogador</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="background: linear-gradient(180deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);">
+        <div class="container">
+            <h2 class="section-title">🎮 Breakout</h2>
+            <p class="section-subtitle">Quebre os blocos com sua bola</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin: 50px 0;">
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">🎯 Conceitos Aprendidos</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>✓ Gerenciamento de grid de blocos</li>
+                            <li>✓ Detecção de colisão com múltiplos objetos</li>
+                            <li>✓ Destruição dinâmica de objetos</li>
+                            <li>✓ Power-ups e especiais</li>
+                            <li>✓ Progressão de levels</li>
+                            <li>✓ Lives e game over</li>
+                            <li>✓ Efeitos visuais e feedback</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: rgba(22, 42, 63, 0.5); padding: 30px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                        <h3 style="color: #00d9ff; margin-bottom: 20px; font-size: 24px;">📖 Descrição</h3>
+                        <p style="color: #c0d4ff; line-height: 1.8; margin-bottom: 20px;">
+                            Breakout é um jogo onde você controla uma raquete na parte inferior da tela. Uma bola ricocha pelos blocos 
+                            acima, e seu objetivo é rebatê-la com a raquete para quebrar os blocos. Cada bloco quebrado dá pontos. 
+                            Se a bola passar por sua raquete, perde uma vida.
+                        </p>
+                        <h3 style="color: #00d9ff; margin-bottom: 15px; font-size: 20px;">🎮 Controles</h3>
+                        <ul style="color: #c0d4ff; line-height: 2;">
+                            <li>⬅️ Esquerda: Move raquete para esquerda</li>
+                            <li>➡️ Direita: Move raquete para direita</li>
+                            <li>🎯 Mira: Aponte para posição desejada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">🎯 Por Que Estes Jogos?</h2>
+            <p class="section-subtitle">A escolha dos clássicos</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🕐</div>
+                    <h3>Atemporais</h3>
+                    <p>
+                        Estes jogos estão na cultura popular há décadas. Todos os conhecem, o que facilita a compreensão 
+                        e cria conexão emocional com o aprendizado.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Educacionais</h3>
+                    <p>
+                        Cada jogo ensina conceitos diferentes de programação e lógica, desde movimentação até detecção de colisão 
+                        e gerenciamento de estado complexo.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Complexidade Progressiva</h3>
+                    <p>
+                        Começando com Snake (simples), passando por Tetris e Pong (intermediário), até Breakout (complexo). 
+                        Permite aprendizado gradual.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Visualmente Atraentes</h3>
+                    <p>
+                        Em uma matriz 16x16, estes jogos clássicos se tornam visualmente impressionantes com animações e cores dinâmicas 
+                        que motivam o aprendizado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>GameCube - Aprenda na Prática</h3>
+            <p style="margin-top: 20px; opacity: 0.7;">
+                Projeto desenvolvido com ❤️ por João Eduardo, Nicolas Palácio, Lorenzo Oliveira e Mateus Bedim
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
